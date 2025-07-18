@@ -4,6 +4,8 @@
 ### Description
 CrowPi3
 
+[Uploading crowpi_3_1_0.webp…]()
+
 CrowPi 3 is constructed around the newly released Raspberry Pi 5 development board by the Raspberry Pi Foundation. It serves as a powerful tool that integrates learning, design, and programming, offering a new learning platform for coding enthusiasts and developers. CrowPi 3 is compatible with various development boards including Pi 5, Arduino Nano, micro:bit, and Pico series. It integrates a variety of sensors and is equipped with a display, camera, and microphone, facilitating the construction of an AI smart hardware platform. Additionally, it offers abundant course resources, making CrowPi 3 an ideal choice for learning programming.
 
 ### Website
