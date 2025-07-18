@@ -42,38 +42,39 @@ Please strictly use 5V5A adapter that supports PD protocol for power supply, oth
 
 <br>
 
+
 # Information of CrowPi3 on-board modules
 
-| Function               | connector       | quantities | reference voltage | raspberry pi(3.3V)（Function name for IO） | Arduino Nano v3(5V)          | micro:bit(3.3V)     | PICO(3.3V)          |
-| ---------------------- | --------------- | ---------- | ----------------- | ------------------------------------------ | ---------------------------- | ------------------- | ------------------- |
-| Accelerometer&Gyro     | I2C             | 1          | 3.3V              | SCL1,SDA1                                  | A5,SCL;A4,SDA                | P19,SCL;P20,SDA     | P17,SCL;P16,SDA     |
-| 1602 LCD               | I2C             | 1          | 5V                |                                            |                              |                     |                     |
-| Digital display        | I2C             | 1          | 5V                |                                            |                              |                     |                     |
-| LIGHT SENSOR           | I2C             | 1          | 3.3V              |                                            |                              |                     |                     |
-| EEPROM                 | I2C             | 1          | 5V                |                                            |                              |                     |                     |
-| Temperature & Humidity | I2C             | 1          | 3.3V              |                                            |                              |                     |                     |
-| IIC                    | I2C             | 1          | 5V                |                                            |                              |                     |                     |
-| Encoder                | I2C             | 2          | 5V                |                                            |                              |                     |                     |
-| HALL SENSOR            | I2C/GPIO        | 1          | 5V                | IO26                                       | P21                          |                     |                     |
-| STEP MOTOR             | I2C/GPIO        | 4          | 5V                | IO21,IO22,IO23,IO06(STEP1,2,3,4)           | P22,P26,P27,P28(STEP1,2,3,4) |                     |                     |
-| Vibration sensor       | I2C/GPIO        | 1          | 5V                | IO02                                       | P10                          |                     |                     |
-| LED*6                  | IIC-PR2040,IO10 | 6          | 5V                | SCL1,SDA1                                  | P1                           | P17,SCL;P16,SDA     |                     |
-| 8*8RGB(RGB_LED)        | IIC-PR2040,IO6  | 1          | 5V                | P12                                        |                              |                     |                     |
-| ROCKER                 | SPI-ADC         | 2          | 3.3V              | CE1,SCLK,MISO,MOSI                         | A6,A7                        | P13,P14,P15,P16(CS) | P14,P12,P15,P13(CS) |
-| custom_key*4           | SPI-ADC         | 1          | 3.3V              | D13,D12,D11,D10(CS)                        |                              |                     |                     |
-| Voltage Sensor         | SPI-ADC         | 1          | 3.3V              |                                            |                              |                     |                     |
-| RFID                   | SPI             | 1          | 3.3V              | CE0,SCLK,MISO,MOSI                         | D13,D12,D11,D9(CS)           | P13,P14,P15,P4(CS)  | P14,P12,P15,P11(CS) |
-| SERVO                  | GPIO            | 1          | 5V                | IO24                                       | D3                           | P10                 | P8                  |
-| Touch Sensor           | GPIO            | 1          | 3.3V              | IO0                                        | A0                           | P3                  | P20                 |
-| Ultrasonic Sensor      | GPIO            | 2          | 3.3V              | IO25(EHCO),IO27(TRIG)                      | A1(TRIG),D5(EHCO)            | P6(TRIG),P11(EHCO)  | P3(TRIG),P9(EHCO)   |
-| Flame                  | GPIO            | 1          | 3.3V              | IO07                                       | A2                           | P9                  | P7                  |
-| Relay                  | GPIO            | 1          | 5V                | IO29                                       | A3                           | P2                  | P18                 |
-| Tilt sensor            | GPIO            | 1          | 3.3V              | IO03                                       | D7                           | P7                  | P4                  |
-| Motion sensor          | GPIO            | 1          | 3.3V              | IO04                                       | D4                           | P5                  | P6                  |
-| SOUND_SENSOR           | GPIO            | 1          | 3.3V              | IO05                                       | D8                           | NC                  | P5                  |
-| BUZZER                 | GPIO            | 1          | 5V                | IO01                                       | D6                           | P0                  | P19                 |
-| IR Remote Sensor       | GPIO            | 1          | 3.3V              | IO28                                       | D2                           | P8                  | P2                  |
-| uart                   | uart            | 1          | 3.3V              | TXD, RXD                                   | D1,TX D0,RX                  | NC                  | P0,TX;P1;RX         |
-| burn-in port           | USB-UART        | 1          | 5V                | TXD, RXD                                   | D1,TX D0,RX                  | NC                  |                     |
+| Function               | connector       | quantities | reference voltage | raspberry pi(3.3V)（Function name for IO） | Arduino Nano v3(5V) | micro:bit(3.3V)     | PICO(3.3V)                   |
+| ---------------------- | --------------- | ---------- | ----------------- | ------------------------------------------ | ------------------- | ------------------- | ---------------------------- |
+| Accelerometer&Gyro     | I2C             | 1          | 3.3V              | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| 1602 LCD               | I2C             | 1          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| Digital display        | I2C             | 1          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| LIGHT SENSOR           | I2C             | 1          | 3.3V              | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| EEPROM                 | I2C             | 1          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| Temperature & Humidity | I2C             | 1          | 3.3V              | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| IIC                    | I2C             | 1          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| Encoder                | I2C             | 2          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P17,SCL;P16,SDA              |
+| HALL SENSOR            | I2C/GPIO        | 1          | 5V                | IO26                                       | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P21                          |
+| STEP MOTOR             | I2C/GPIO        | 4          | 5V                | IO21,IO22,IO23,IO06(STEP1,2,3,4)           | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P22,P26,P27,P28(STEP1,2,3,4) |
+| Vibration sensor       | I2C/GPIO        | 1          | 5V                | IO02                                       | A5,SCL;A4,SDA       | P19,SCL;P20,SDA     | P10                          |
+| LED*6                  | IIC-PR2040,IO10 | 6          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P1                  | P17,SCL;P16,SDA              |
+| 8*8RGB(RGB_LED)        | IIC-PR2040,IO6  | 1          | 5V                | SCL1,SDA1                                  | A5,SCL;A4,SDA       | P12                 | P17,SCL;P16,SDA              |
+| ROCKER                 | SPI-ADC         | 2          | 3.3V              | CE1,SCLK,MISO,MOSI                         | A6,A7               | P13,P14,P15,P16(CS) | P14,P12,P15,P13(CS)          |
+| custom_key*4           | SPI-ADC         | 1          | 3.3V              | CE1,SCLK,MISO,MOSI                         | D13,D12,D11,D10(CS) | P13,P14,P15,P16(CS) | P14,P12,P15,P13(CS)          |
+| Voltage Sensor         | SPI-ADC         | 1          | 3.3V              | CE1,SCLK,MISO,MOSI                         | D13,D12,D11,D10(CS) | P13,P14,P15,P16(CS) | P14,P12,P15,P13(CS)          |
+| RFID                   | SPI             | 1          | 3.3V              | CE0,SCLK,MISO,MOSI                         | D13,D12,D11,D9(CS)  | P13,P14,P15,P4(CS)  | P14,P12,P15,P11(CS)          |
+| SERVO                  | GPIO            | 1          | 5V                | IO24                                       | D3                  | P10                 | P8                           |
+| Touch Sensor           | GPIO            | 1          | 3.3V              | IO0                                        | A0                  | P3                  | P20                          |
+| Ultrasonic Sensor      | GPIO            | 2          | 3.3V              | IO25(EHCO),IO27(TRIG)                      | A1(TRIG),D5(EHCO)   | P6(TRIG),P11(EHCO)  | P3(TRIG),P9(EHCO)            |
+| Flame                  | GPIO            | 1          | 3.3V              | IO07                                       | A2                  | P9                  | P7                           |
+| Relay                  | GPIO            | 1          | 5V                | IO29                                       | A3                  | P2                  | P18                          |
+| Tilt sensor            | GPIO            | 1          | 3.3V              | IO03                                       | D7                  | P7                  | P4                           |
+| Motion sensor          | GPIO            | 1          | 3.3V              | IO04                                       | D4                  | P5                  | P6                           |
+| SOUND_SENSOR           | GPIO            | 1          | 3.3V              | IO05                                       | D8                  | NC                  | P5                           |
+| BUZZER                 | GPIO            | 1          | 5V                | IO01                                       | D6                  | P0                  | P19                          |
+| IR Remote Sensor       | GPIO            | 1          | 3.3V              | IO28                                       | D2                  | P8                  | P2                           |
+| uart                   | uart            | 1          | 3.3V              | TXD, RXD                                   | D1,TX D0,RX         | NC                  | P0,TX;P1;RX                  |
+| burn-in port           | USB-UART        | 1          | 5V                | TXD, RXD                                   | D1,TX D0,RX         | NC                  |                              |
 
 
